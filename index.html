@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Dragon Travels</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div id="success" class="alert alert-success alert-dismissible fade">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            <strong>Success!</strong> <span>Your travel request has been successfully submitted </span></div>
+
+        <div id="failure" class="alert alert-danger alert-dismissible fade">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            <strong>Failure!</strong> <span>Your travel request has been not been submitted due to error</span></div>
+
+        <h1>Dragon Travel Desk</h1>
+
+        <form>
+
+            <div class="form-group">
+                <label for="name">Enter your name:</label>
+                <input type="name" class="form-control" placeholder="Enter your name" id="name">
+                <div class="invalid-feedback">
+                    name msut be 2-20 characters long and should not start with a number
+                  </div>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Enter your email:</label>
+                <input type="text" class="form-control" placeholder="Enter email" id="email">
+                <div class="invalid-feedback">
+                    Your email must be a valid email
+                  </div>
+            </div>
+
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" type="checkbox"> Remember me
+                </label>
+            </div>
+
+            <div class="form-group">
+                <label for="car">Select your car:</label>
+                <select class="form-control" id="car">
+                    <option>Omni</option>
+                    <option>Maruti</option>
+                    <option>Ford</option>
+                    <option>Audi</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="address">Enter your address:</label>
+                <textarea class="form-control" rows="5" id="address" name="address"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Enter your phone number:</label>
+                <input class="form-control" rows="5" id="phone" name="phone"></input>
+                <div class="invalid-feedback">
+                    your phone number must be 11 digit long
+                  </div>
+            </div>
+
+            <div class="form-group">
+                <label for="msg">Any other message...</label>
+                <textarea class="form-control" rows="5" id="msg" name="msg"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" id="submit">Submit</button>
+        </form>
+    </div>
+</body>
+<script src="app.js"></script>
+</html>
